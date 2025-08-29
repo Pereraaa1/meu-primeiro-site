@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="imagens/logo.png">
+</head>
+<body>
+    <body id="pagina-contato"></body>
+    <!-- Cabeçalho -->
+    <header>
+        <a href="index.html" class="logo-link">
+        <img src="imagens/logo.png" alt="Logo do site" width="100" height="100">
+        </a>
+        
+    
+    <nav>   
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="contato.html">Contato</a></li>
+            
+            
+           
+        </ul>
+    </nav>
+    </header> 
+<main>
+        <section id="Contato">
+        
+        <h2>Entre em contato comigo!</h2>
+
+    <form action="https://formsubmit.co/guiptgod123@gmail.com" method="POST" target="hidden-iframe">
+            <div class="form-group">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+            </div>
+            <button type="submit">Enviar</button>
+        </form>
+        </section>
+        </main>
+        <iframe name="hidden-iframe" style="display:none;" onload="formSubmitted()"></iframe>
+        
+        <footer>
+            <p>&copy; 2025 - Guilherme Pereira</p>
+        </footer>
+
+        <script>
+    const formulario = document.querySelector('form');
+
+    formulario.addEventListener('submit', (evento) => {
+        // Impede o envio padrão do formulário (para que a página não recarregue)
+        evento.preventDefault();
+
+        // Limpa todos os campos do formulário
+        formulario.reset();
+
+        // Exibe uma mensagem de sucesso para o usuário
+        alert("Sucesso!! Sua mensagem foi enviada.");
+
+        // Tenta enviar o formulário para o Formsubmit.co em segundo plano
+        // Essa parte pode não funcionar no ambiente de teste local
+        // mas funcionará quando seu site estiver na internet.
+        formulario.submit();
+    });
+</script>
+    </body>

@@ -1,0 +1,234 @@
+/* reset basico */
+* {
+    margin: 0; /* remove margens e espaçamentos padrões */
+    padding: 0; /* remove margens e espaçamentos padrões */
+    box-sizing: border-box;
+}   
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap'); /* importa a fonte Poppins do google fonts */
+
+/* estilo do corpo */
+body { 
+    font-family: Poppins, sans-serif; /* fonte do google fonts */
+    line-height: 1.6; /* espaçamento entre linhas */
+    background: linear-gradient(180deg, #1a1a1a, #333333); /* gradiente de cor */
+    color: #333; /* cor do texto */
+    min-height: 100vh; /* Garante que a cor de fundo cubra toda a tela, mesmo com pouco conteúdo */
+}
+
+/* estilo da área da logo e titulo */
+.logo-area {
+    display: flex; /* deixa a logo e o titulo lado a lado */
+    align-items: center; /* alinha verticalmente */
+    gap: 550px; /* espaço entre a logo e o titulo */
+}
+
+/* estilo dos cabeçalhos */
+header{
+    display: flex; /* deixa a logo e o menu lado a lado */
+    align-items: center; /* alinha verticalmente */
+    justify-content: space-between; /* espaço entre a logo e o menu */
+    padding: 20px; /* espaçamento interno */
+    background-color: #2d2d2f;
+    color: #9669d6;
+}
+
+/* Logo */
+.logo-link img { /* Seleciona a imagem dentro do link da logo */
+  border-radius: 50%;  /* Deixa a logo redonda */
+  transition: transform 0.3s; /* Efeito suave ao passar o mouse */
+}
+
+.logo-link:hover img { /* Aplica o efeito ao passar o mouse sobre o link da logo */
+  transform: scale(1.1); /* Aumenta a logo ao passar o mouse */
+}
+
+/*logo e titulo do site */
+header img { /* seleciona a imagem dentro do header */
+    border-radius: 50%; /* deixa a imagem redonda */
+    margin-right: 15px;
+}
+header h1 { /* seleciona o h1 dentro do header */
+    font-family: Poppins, sans-serif;
+    font-size: 2.8rem; /* tamanho da fonte */
+    font-weight: 600; /* deixa a fonte em negrito */
+    color: #9669d6; /* cor do texto */
+    text-transform: uppercase; /* deixa o texto em maiúsculo */
+    margin-left: 20px; /* espaço entre a logo e o titulo */
+}
+ nav ul {
+    list-style: none; /*remove as bolinhas da lista */
+    display: flex; /* deixa os itens da lista lado a lado */
+    gap: 20px; /* espaço entre os itens */
+    margin:0;
+    padding:0;
+}
+
+ nav ul li {
+    margin-left: none; /* espaço entre os itens */
+}
+
+nav ul li a {
+    color:white; /* cor do texto do link*/
+    text-decoration: none; /* remove o sublinhado do link */
+    font-weight: 600; /* deixa o texto em negrito */
+    padding: 8px 15px; /* espaço ao redor do texto */
+    border-radius: 8px; /* bordas arredondadas */
+    transition: 0.6s; /* transição suave quando passa o mouse*/
+}
+
+nav ul li a:hover{ /* efeito ao passar o mouse */
+    background: #9669d6; /* cor de fundo quando passa o mouse */
+    color:white; /* cor do texto quando passa o mouse */
+    transform: scale(1.1); /* aumenta o tamanho do link quando passa o mouse */
+}
+/*conteúdo principal */
+main{
+    display: grid; /* usa grid para organizar o conteúdo */
+    grid-template-columns: 1fr 1fr; /* duas colunas de tamanho igual */
+    gap:20px; /* espaço entre as colunas e linhas */
+    padding: 20px; /* espaçamento interno */
+    justify-content: center; /* centraliza o conteúdo */
+}
+
+section{
+background: white; /* cor de fundo */
+padding:20px; /* espaçamento interno */
+border-radius: 12px; /* bordas arredondadas */
+box-shadow: 0 6px 15px rgba(0,0,0,0.15); /* sombra suave */
+transition: transform 0.3s, box-shadow 0.3s, border 0.3s; /* transição suave para transformações */
+}
+
+section:hover{
+    transform: translateY(-5px); /* levanta a seção ao passar o mouse */
+    box-shadow: 0 10px 20 px rgba(0,0,0,0.2); /* sombra mais intensa ao passar o mouse */
+    border: 2px solid #9669d6; /* borda colorida ao passar o mouse */
+}
+    
+
+section h2{
+font-family: Poppins, sans-serif; /* fonte do google fonts */
+font-size: 2rem; /* tamanho da fonte */
+font-weight: 600; /* deixa a fonte em negrito */
+color: #9669d6; /* cor do texto */
+border-bottom: 2px solid #9669d6; /* uma linha abaixo do titulo */
+padding-bottom: 0px; /* espaçamento interno abaixo do titulo */
+margin-bottom: 10px; /* espaçamento externo abaixo do titulo */
+}
+
+section p{
+    font-family: Poppins, sans-serif; /* fonte do google fonts */
+    font-size: 1.4rem; /* tamanho da fonte */
+    line-height: 1.8; /* espaçamento entre linhas */
+    color:#555; /* cor do texto */
+}
+
+
+.hobbies-item p {
+    display:flex; /* usa flexbox para alinhar os itens */
+    align-items: center; /* alinha vertical*/
+    gap:10px; /* espaço entre o ícone e o texto */
+
+}
+
+.hobbies-item {
+    margin-bottom: 15px; /* espaçamento entre os itens */
+}
+
+.hobbies-item:last-child{
+    margin-bottom: 0; /* remove o espaçamento do último item */
+}
+
+
+/* estilo do rodapé */
+footer{
+   background: linear-gradient(90deg, #2d2d2f, #1a1a1a); /* gradiente de cor */
+   color: #bbb; /* cor do texto */
+   text-align: center; /* centraliza o texto */
+    padding: 0px; /* espaçamento interno */
+    font-size: 0.9rem; /* tamanho da fonte */
+    margin-top: 30px; /* espaçamento externo */
+    border-top: 2px solid #444; /* linha superior */ 
+}
+
+
+/* estilo da seção Sobre */
+#Sobre{
+width: 80%; /* largura da seção */
+max-width: 800px; /* largura máxima */
+margin: 20px auto; /* centraliza a seção */
+text-align: center; /* centraliza o texto */
+
+}
+
+/* estilo da seção Contato */
+#Contato{
+width: 80%; /* largura da seção */    
+max-width: 800px; /* largura máxima */
+margin: 20px auto; /* centraliza a seção */
+padding: 20px; /* espaçamento interno */
+background: white; /* cor de fundo */
+border-radius: 12px; /* bordas arredondadas */
+box-shadow: 0 6px 15px rgba(0,0,0,0.15); /* sombra suave */
+transition: transform 0.3s, box-shadow 0.3s, border 0.3s; /* transição suave para transformações */
+text-align: center; /* centraliza o texto */
+}
+
+/* estilo do formulário de contato */
+#Contato input[type="text"],
+#Contato input[type="email"],
+#Contato textarea {
+    width: 100%; /* largura total */
+    padding: 10px; /* espaçamento interno */
+    margin: 10px 0; /* espaçamento externo */
+    border: 1px solid #ccc; /* borda */
+    border-radius: 8px; /* bordas arredondadas */
+    font-size: 1rem; /* tamanho da fonte */
+    font-family: Poppins, sans-serif; /* fonte do google fonts */
+    
+}
+
+#Contato textarea {
+    resize: vertical; /* permite redimensionar verticalmente */
+}
+
+/* estilo do botão de envio */
+#contato button{
+    background: #9669d6; /* cor de fundo */
+    color: white; /* cor do texto */
+    padding: 12px 25px; /* espaçamento interno */
+    border: none; /* remove a borda */
+    border-radius: 8px; /* bordas arredondadas */
+    font-size: 1.1rem; /* tamanho da fonte */
+    cursor: pointer; /* muda o cursor ao passar o mouse */
+    transition: background 0.3s, transform 0.3s; /* transição suave */
+    margin-top: 15px; /* espaçamento externo */
+}
+
+#Contato button:hover{
+    transform: scale(1.05); /* aumenta o botão ao passar o mouse */
+}
+
+#pagina--sobre main, #pagina-contato main{
+    display: flex; /* usa flexbox para centralizar os itens */
+    justify-content: center; /* centraliza horizontalmente os itens */
+    align-items: flex-start; /* alinha os itens no topo verticalmente */
+    padding: 20px; /* espaçamento interno */
+    box-sizing: border-box; /* garante que o padding não adicione largura extra */
+
+}
+ 
+
+
+
+
+
+.form-group{
+    display: flex; /* usa flexbox para alinhar os itens */
+    flex-direction: column; /* alinha os itens em coluna */
+    margin-bottom: 20px; /* espaçamento entre os itens */
+}
+.form-group label{
+    font-weight: 600; /* deixa o texto em negrito */
+    margin-bottom: 5px; /* espaçamento abaixo do label */
+    color: #333; /* cor do texto */
+}
